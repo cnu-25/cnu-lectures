@@ -6,7 +6,7 @@ import jax
 def minimize(fun, *args, **kwargs):
     """Wrapper for :func:`scipy.optimize.minimize` using JAX for
     gradient-based minimization. Automatically constructs `jac` from `fun`
-    using :func:`jax.jvp`.
+    using :func:`jax.vjp`.
     """
 
     J_vjp_cache = None
