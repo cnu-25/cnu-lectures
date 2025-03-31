@@ -3,6 +3,12 @@ from scipy.optimize import minimize as sp_minimize
 import jax
 
 
+__all__ = \
+    [
+        "minimize"
+    ]
+
+
 def minimize(fun, *args, **kwargs):
     """Wrapper for :func:`scipy.optimize.minimize` using JAX for
     gradient-based minimization. Automatically constructs `jac` from `fun`
